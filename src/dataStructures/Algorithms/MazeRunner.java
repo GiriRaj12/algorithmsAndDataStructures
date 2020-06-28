@@ -17,8 +17,9 @@ public class MazeRunner {
             return;
         }
 
-        if(x== arr.length || y==arr[0].length || arr[x][y].equals("-"))
+        if(x== arr.length || y==arr[0].length || arr[x][y].equals("-")) {
             return;
+        }
 
         else{
             if(arr[x][y].equals("X")) {
@@ -26,7 +27,7 @@ public class MazeRunner {
                 result[x][y] = 1;
                 mazeUp(arr,x,y+1,3,3,result);
                 mazeUp(arr,x+1,y,3,3,result);
-                result[x][y] = 1;
+                result[x][y] = 0;
             }
         }
     }
